@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Flash-of-wrong-theme prevention: runs before any CSS/JS -->
+    <script>
+      try {
+        var s = localStorage.getItem('theme');
+        if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) {}
+    </script>
+
+    <!-- Primary meta -->
+    <title>TODO Full Name — Software Engineering Portfolio</title>
+    <meta name="description" content="TODO — Short description of your portfolio for search engines." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#09090b" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://TODO.your-domain.com" />
+    <meta property="og:title"       content="TODO Full Name — Software Engineering Portfolio" />
+    <meta property="og:description" content="TODO — Short description for social shares." />
+    <meta property="og:image"       content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="TODO Full Name — Software Engineering Portfolio" />
+    <meta name="twitter:description" content="TODO — Short description for Twitter." />
+    <meta name="twitter:image"       content="/og-image.png" />
+
+    <!-- Person JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "TODO Full Name",
+      "url": "https://TODO.your-domain.com",
+      "sameAs": [
+        "https://github.com/git-krrishraj",
+        "https://linkedin.com/in/krrish-raj-78a665364"
+      ],
+      "jobTitle": "Software Engineering Student",
+      "description": "Electrical Engineering undergraduate from India building software."
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

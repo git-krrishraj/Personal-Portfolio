@@ -1,0 +1,110 @@
+/* Inter variable font */
+@import "@fontsource-variable/inter";
+
+/* Tailwind v4 — CSS-first configuration */
+@import "tailwindcss";
+
+/* ─── Design Tokens (light theme) ─────────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Max content width */
+  --max-content: 1100px;
+
+  /* Colors — light theme */
+  --color-bg:            #ffffff;
+  --color-surface:       #f4f4f5;
+  --color-surface-hover: #e4e4e7;
+  --color-border:        #e4e4e7;
+  --color-text-primary:  #18181b;
+  --color-text-muted:    #71717a;
+  --color-accent:        #6366f1;
+  --color-accent-hover:  #4f46e5;
+  --color-accent-fg:     #ffffff;
+}
+
+/* ─── Dark-mode token overrides ───────────────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  @theme {
+    --color-bg:            #09090b;
+    --color-surface:       #18181b;
+    --color-surface-hover: #27272a;
+    --color-border:        #27272a;
+    --color-text-primary:  #fafafa;
+    --color-text-muted:    #a1a1aa;
+    --color-accent:        #818cf8;
+    --color-accent-hover:  #6366f1;
+    --color-accent-fg:     #ffffff;
+  }
+}
+
+/* ─── Base styles ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Disable smooth scroll for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ─── Focus ring ──────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Skip to content ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+  border-radius: 0 0 6px 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ─── Scrollbar (subtle) ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
