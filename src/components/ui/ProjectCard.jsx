@@ -7,13 +7,24 @@
 import { RiGithubLine, RiExternalLinkLine } from 'react-icons/ri';
 
 export function ProjectCard({ project }) {
-  const { title, problem, description, stack, githubUrl, liveUrl, image } = project;
+  const { title, problem, description, stack, githubUrl, liveUrl, image, video } = project;
 
   return (
     <article className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-[var(--color-accent)]/40">
-      {/* Image / Placeholder */}
-      <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
-        {image ? (
+      {/* Media / Video / Image / Placeholder */}
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+        {video ? (
+          <video
+            src={video}
+            poster={image || undefined}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-cover"
+          />
+        ) : image ? (
           <img
             src={image}
             alt={`${title} screenshot`}

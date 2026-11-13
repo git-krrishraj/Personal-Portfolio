@@ -10,10 +10,10 @@
 //   stack       — array of technology strings shown as tags
 //   githubUrl   — link to repo (required)
 //   liveUrl     — link to live demo (optional, omit or set null)
-//   image       — path relative to /public, e.g. "/images/project-1.webp"
-//                 (optional; omit or set null to show a placeholder gradient)
+//   video       — path relative to /public, e.g. "/videos/project-1.mp4" (optional)
+//   image       — path relative to /public, e.g. "/images/project-1.webp" or imported asset
+//                 (optional; acts as poster if video is present, or fallback)
 // ─────────────────────────────────────────────────────────────────────────────
-
 export const projects = [
   {
     id: 'project-1',
@@ -24,6 +24,7 @@ export const projects = [
     stack: ['ReactJS', 'MongoDB', 'ExpressJS', 'NodeJS', 'Gemini API'],
     githubUrl: 'https://github.com/git-krrishraj/Resume-AI',
     liveUrl: null,
+    video: '/videos/resume-video.mp4',
     image: null,
   },
   {
@@ -35,6 +36,7 @@ export const projects = [
     stack: ['NodeJS', 'ExpressJS', 'MongoDB', 'JWT', 'Bcrypt', 'Nodemailer'],
     githubUrl: 'https://github.com/git-krrishraj/Banking-System-Backend-Environment',
     liveUrl: null,
+    video: '/videos/banking-video.mp4',
     image: null,
   },
   {
@@ -46,6 +48,7 @@ export const projects = [
     stack: ['ReactJS', 'Tailwind CSS', 'Vite', 'JavaScript', 'Local Storage'],
     githubUrl: 'https://github.com/git-krrishraj/Employee-Management-System',
     liveUrl: null,
+    video: '/videos/employee-video.mp4',
     image: null,
   },
 ];
