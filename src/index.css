@@ -10,7 +10,7 @@
   --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif;
 
   /* Max content width */
-  --max-content: 1100px;
+  --max-content: 1150px;
 
   /* Colors — light theme */
   --color-bg:            #ffffff;
@@ -28,28 +28,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .dark {
-  @theme {
-    --color-bg:            #09090b;
-    --color-surface:       #18181b;
-    --color-surface-hover: #27272a;
-    --color-border:        #27272a;
-    --color-text-primary:  #fafafa;
-    --color-text-muted:    #a1a1aa;
-    --color-accent:        #818cf8;
-    --color-accent-hover:  #6366f1;
-    --color-accent-fg:     #ffffff;
-  }
+  --color-bg:            #09090b;
+  --color-surface:       #18181b;
+  --color-surface-hover: #27272a;
+  --color-border:        #27272a;
+  --color-text-primary:  #fafafa;
+  --color-text-muted:    #a1a1aa;
+  --color-accent:        #818cf8;
+  --color-accent-hover:  #6366f1;
+  --color-accent-fg:     #ffffff;
 }
 
 /* ─── Base styles ─────────────────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);

@@ -80,22 +80,22 @@ export function ContactForm() {
   }
 
   const inputClass =
-    'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2.5 text-sm ' +
+    'w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm ' +
     'text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] ' +
     'focus:border-[var(--color-accent)] focus:outline-none transition-colors';
 
   if (!isConfigured) {
     return (
-      <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 text-sm text-[var(--color-text-muted)]">
+      <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 sm:p-7 text-sm leading-relaxed text-[var(--color-text-muted)] shadow-xs">
         <p>
           Contact form is not configured yet.{' '}
           <a
             href={`mailto:${site.email}`}
-            className="text-[var(--color-accent)] underline underline-offset-2 hover:no-underline"
+            className="text-[var(--color-accent)] font-medium underline underline-offset-2 hover:no-underline"
           >
             Email me directly
           </a>{' '}
-          or set <code className="font-mono text-xs bg-[var(--color-surface-hover)] px-1 rounded">VITE_WEB3FORMS_KEY</code> in your <code className="font-mono text-xs bg-[var(--color-surface-hover)] px-1 rounded">.env</code> file.
+          or set <code className="font-mono text-xs bg-[var(--color-surface)] px-1.5 py-0.5 rounded">VITE_WEB3FORMS_KEY</code> in your <code className="font-mono text-xs bg-[var(--color-surface)] px-1.5 py-0.5 rounded">.env</code> file.
         </p>
       </div>
     );
@@ -105,7 +105,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 sm:p-7 shadow-xs"
       aria-label="Contact form"
     >
       {/* Honeypot — must be hidden from real users */}

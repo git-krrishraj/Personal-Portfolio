@@ -9,27 +9,25 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-surface)]"
+      className="py-28 lg:py-36 px-4 sm:px-6 lg:px-8 bg-[var(--color-surface)]"
     >
-      <div className="mx-auto max-w-[var(--max-content)]">
+      <div className="mx-auto w-full max-w-[var(--max-content)]">
         <Reveal>
           <SectionHeading
             id="about-heading"
             title="About me"
+            center={true}
           />
         </Reveal>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start">
-          {/* Paragraphs */}
-          <div className="flex flex-col gap-5 max-w-2xl">
-            {site.aboutParagraphs.map((para, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  {para}
-                </p>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mx-auto max-w-3xl flex flex-col gap-6 text-center">
+          {site.aboutParagraphs.map((para, i) => (
+            <Reveal key={i} delay={i * 0.1}>
+              <p className="text-base sm:text-lg leading-relaxed text-[var(--color-text-muted)]">
+                {para}
+              </p>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

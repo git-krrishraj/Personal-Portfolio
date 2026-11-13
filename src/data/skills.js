@@ -10,7 +10,6 @@ export const skills = [
     id: 'languages',
     category: 'Languages',
     items: [
-      { label: 'Python' },
       { label: 'JavaScript' },
       { label: 'C' },
       { label: 'C++' },
@@ -41,7 +40,7 @@ export const skills = [
     category: 'Databases',
     items: [
       { label: 'MongoDB' },
-      { label: 'PostgreSQL' },
+      { label: 'Supabase' },
       // TODO — add or remove
     ],
   },
@@ -51,8 +50,18 @@ export const skills = [
     items: [
       { label: 'Git & GitHub' },
       { label: 'VS Code' },
-      { label: 'Linux' },
+      { label: 'Postman' },
       // TODO — add or remove
     ],
   },
+  {
+    id: 'ai',
+    category: 'AI & Agents',
+    items: [
+      { label: 'Antigravity' },
+      { label: 'Claude' },
+      { label: 'Gemini' },
+      // TODO — add or remove
+    ],
+  }
 ];

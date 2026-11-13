@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg)]">
-      <div className="mx-auto flex max-w-[var(--max-content)] flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--color-text-muted)] sm:flex-row sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-[var(--max-content)] flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-[var(--color-text-muted)] sm:flex-row sm:px-6 lg:px-8">
         <p>© {year} {displayName} · Built with React &amp; Vite</p>
         <div className="flex items-center gap-3">
           <a

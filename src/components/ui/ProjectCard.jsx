@@ -10,7 +10,7 @@ export function ProjectCard({ project }) {
   const { title, problem, description, stack, githubUrl, liveUrl, image } = project;
 
   return (
-    <article className="flex flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden transition-shadow duration-200 hover:shadow-lg">
+    <article className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-[var(--color-accent)]/40">
       {/* Image / Placeholder */}
       <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
         {image ? (
@@ -36,17 +36,17 @@ export function ProjectCard({ project }) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col gap-3 p-5">
-        <h3 className="text-base font-bold text-[var(--color-text-primary)]">{title}</h3>
-        <p className="text-sm font-medium text-[var(--color-accent)]">{problem}</p>
+      <div className="flex flex-1 flex-col gap-3.5 p-6 sm:p-7">
+        <h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)]">{title}</h3>
+        <p className="text-sm font-semibold text-[var(--color-accent)]">{problem}</p>
         <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{description}</p>
 
         {/* Stack tags */}
-        <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+        <div className="flex flex-wrap gap-2 mt-auto pt-3">
           {stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-md bg-[var(--color-surface-hover)] px-2 py-0.5 text-xs font-medium text-[var(--color-text-muted)]"
+              className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] px-2.5 py-1 text-xs font-medium text-[var(--color-text-muted)]"
             >
               {tech}
             </span>
@@ -54,14 +54,14 @@ export function ProjectCard({ project }) {
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-3 pt-1">
+        <div className="flex items-center gap-4 pt-2">
           {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} on GitHub`}
-              className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
             >
               <RiGithubLine size={16} aria-hidden="true" />
               Code
@@ -73,7 +73,7 @@ export function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} live demo`}
-              className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
             >
               <RiExternalLinkLine size={16} aria-hidden="true" />
               Live

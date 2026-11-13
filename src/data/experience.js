@@ -16,25 +16,24 @@ export const experience = [
   {
     id: 'edu-1',
     type: 'education',
-    org: 'TODO — University / College Name',
+    org: 'National Institute of Technology Jamshedpur',
     role: 'B.Tech — Electrical Engineering',
-    period: 'TODO — e.g. Aug 2022 – May 2026',
-    location: 'TODO — City, India',
+    period: 'Aug 2025 – present',
+    location: 'Jamshedpur, India',
     bullets: [
-      'TODO — Relevant coursework, GPA, honours, or anything notable.',
-      'TODO — Club memberships, hackathons, or academic projects.',
+      'GPA- 9.26',
+      'DSA, Competative Programming and core Electrical Engineering subjects.',
     ],
   },
   {
     id: 'work-1',
     type: 'work',
-    org: 'TODO — Company / Organisation Name',
-    role: 'TODO — Intern / Developer / Research Assistant',
-    period: 'TODO — e.g. May 2024 – Jul 2024',
-    location: 'TODO — City or Remote',
+    org: 'Industry & International Relations Club',
+    role: 'Web Developer',
+    period: 'August 2026 – present',
+    location: 'Jamshedpur, India',
     bullets: [
-      'TODO — What did you build or contribute? Start with an action verb.',
-      'TODO — Quantify impact where possible (e.g. "reduced load time by 40%").',
+      
     ],
   },
   // Add more entries as needed — they render in order, newest first recommended

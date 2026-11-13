@@ -15,25 +15,25 @@ export function Hero() {
     <section
       id="hero"
       aria-label="Introduction"
-      className="relative min-h-[calc(100svh-3.5rem)] flex items-center py-20 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-[calc(100svh-3.5rem)] flex items-center py-24 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8"
     >
       <div className="mx-auto w-full max-w-[var(--max-content)]">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
 
           {/* Left — text content */}
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-3">
-              <p className="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)]">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)]">
                 {site.role}
               </p>
               <h1 className="text-4xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-5xl lg:text-6xl">
-                {site.name === 'TODO full name' ? (
+                {site.name === 'Krrish Raj' ? (
                   <>Hey, I&apos;m&nbsp;<span className="text-[var(--color-accent)]">Krrish</span> 👋</>
                 ) : (
                   <>Hey, I&apos;m&nbsp;<span className="text-[var(--color-accent)]">{site.name}</span></>
                 )}
               </h1>
-              <p className="text-lg text-[var(--color-text-muted)] max-w-lg leading-relaxed">
+              <p className="text-lg sm:text-xl text-[var(--color-text-muted)] max-w-lg leading-relaxed">
                 {site.tagline === 'TODO — one-line tagline about what you build or care about'
                   ? 'Building software that solves real problems.'
                   : site.tagline}
@@ -41,7 +41,7 @@ export function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
               <Button href="#projects" variant="primary">
                 <RiArrowDownLine aria-hidden="true" />
                 View work

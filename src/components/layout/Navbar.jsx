@@ -58,14 +58,14 @@ export function Navbar() {
       >
         <nav
           aria-label="Primary navigation"
-          className="mx-auto flex h-14 max-w-[var(--max-content)] items-center justify-between px-4 sm:px-6 lg:px-8"
+          className="mx-auto flex h-16 w-full max-w-[var(--max-content)] items-center justify-between px-4 sm:px-6 lg:px-8"
         >
           {/* Logo / name */}
           <a
             href="#hero"
             className="text-sm font-bold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors"
           >
-            {site.name === 'TODO full name' ? 'Portfolio' : site.name}
+            Krrish Raj
           </a>
 
           {/* Desktop nav links */}
